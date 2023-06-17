@@ -8,7 +8,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping("/temperature")
+@RequestMapping("/gb/temperature")
 public class TemperatureController extends BaseController<Temperature, Integer, TemperatureRepository> {
 
     // @Autowired
