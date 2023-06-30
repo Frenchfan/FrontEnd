@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body {
+    background-color: #020a18;
+}
+
 .top {
     padding-bottom: 99px;
 }
@@ -12,6 +16,11 @@
     padding-bottom: 39px;
 }
 
+.header__link {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
 .top__content {
     margin-top: 160px;
     margin-bottom: 197 px;
@@ -19,12 +28,22 @@
 
 .subtitle {
     margin-bottom: 10 px;
+    color: #3A68B8;
 }
 
 .title {
     margin-bottom: 40px;
+    color: #E5E5E5;
 }
 
-top__buttons {
+.top__buttons {
     margin-top: 50px;
+}
+
+.button {
+    background-color: #3A68B8;
+    color: #FFFFFF;
+}
+.text {
+    color: #FFFFFF;
 }
