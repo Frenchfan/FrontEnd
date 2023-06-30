@@ -19,7 +19,7 @@ public abstract class BaseController<T, ID, R extends BaseRepository<T, ID>> {
     @Autowired
     protected R repository;
 
-        @GetMapping
+    @GetMapping
     public Flux<T> getAll() {
         return repository.findAll();
     }

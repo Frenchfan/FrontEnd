@@ -10,7 +10,16 @@
 .header {
     padding-top: 26px;
     padding-bottom: 48px;
+
+    
 }
+
+header__link {
+    display: flex;
+    justify-content: center;
+}
+
+
 
 .top__content {
     margin-top: 15px;
