@@ -1,39 +1,127 @@
 * {
     margin: 0;
     padding: 0;
+    border: 0;
+    text-decoration: none;
+    padding: 0 calc(50% - 585px);
+
+
 }
 
-.top {
-    padding-bottom: 14px;
+@font-face {
+  font-family: "Gilroy"; 
+  src: url("fonts/Gilroy-SemiBold.ttf") format("truetype"); 
 }
 
-.header {
-    padding-top: 26px;
-    padding-bottom: 48px;
 
+
+.header {    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    margin-top: 45px;
+}
+
+.header__links {
+    font-family: "Gilroy-Semibold", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400; 
+    margin-top: 51px;
+    text-decoration: none;    
+}
+
+.header__links a {
+    margin-left: 25px;
     
 }
 
-header__link {
-    display: flex;
-    justify-content: center;
+.header__link1 {
+    color: #F25822;;
 }
 
-
+.header__link {
+    color: #000000;
+}
 
 .top__content {
-    margin-top: 15px;
-    margin-bottom: 27 px;
+    margin-top: 84px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.top-info {
+    
 }
 
 .title {
-    margin-top: 59px;
+    color: #000;
+    font-size: 60px;
+    font-family: Gilroy-Bold, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
-.subtitle {
-    margin-top: 17 px;
+.text {
+    margin-top: 17px;
+    color: #888;
+    font-size: 20px;
+    font-family: Gilroy-Medium, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
-top__buttons {
+.top__buttons {
+    display: flex;
+    justify-content: flex-start;
     margin-top: 37px;
+    font-size: 15px;
+    font-family: Gilroy-Bold, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+.button1 {
+    color: #FFF;
+    font-size: 15px;
+    font-family: Gilroy-Bold, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 140px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background: #F25822;
+    box-shadow: 4px 4px 8px 0px rgba(242, 88, 34, 0.20);
+}
+
+.button2 {
+    margin-left: 72px;
+    color: #AAA;
+    font-size: 15px;
+    font-family: Gilroy-Bold, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background: #FFF;
+}
+
+.button1:hover, 
+.button2:hover {
+    cursor: pointer;
+}
+
+.top__logos {
+    margin-top: 163px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
 }
