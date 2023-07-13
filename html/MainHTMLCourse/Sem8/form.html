@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 1. Создание страницы регистрации
+2. Создать поля ввода
+a. Имя
+b. Имейл
+c. Пароль
+d. Возраст (номер)
+e. Дата рождения
+f. Номер телефона
+3. Ползунок range (значение от 1 до 10)
+4. Все поля ввода должны быть обязательны для ввода
+5. На первом поле ввода должен быть автофокус -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+        <p>
+            <input type="text" autofocus required placeholder="Name">
+        </p>
+        <p>
+            <input type="email" required placeholder="email">
+        </p>
+        <p>
+            <input type="password" required placeholder="password">
+        </p>
+        <p>
+            <input min="1" type="number" required placeholder="Age">
+        </p>
+        <p>
+            <input type="date" required>
+        </p>
+        <p>
+            <input type="number" required placeholder="Phone number">
+        </p>
+        <p>
+            <input min="1" max="10" type="range" step="1" required>
+        </p>
+        <button type="submit">Отправить</button>
+    </form>
+</body>
+</html>
