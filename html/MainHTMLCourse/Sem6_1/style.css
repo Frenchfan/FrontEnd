@@ -183,6 +183,10 @@ h6 {
     position: relative;
 }
 
+.item_sel .fitem {
+    transition: .3s;
+}
+
 .addtocart {
     position: absolute;
     top: 50%;
@@ -191,6 +195,7 @@ h6 {
     opacity: 0;
     transition: opacity 0.3s ease;
 }
+
 
 .item_sel:hover .fitem {
     filter: brightness(30%);
