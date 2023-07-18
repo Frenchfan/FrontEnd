@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Lato', sans-serif;
-     
+
 }
 
 html {
@@ -12,13 +12,13 @@ html {
 .upper__line {
     background-color: #222;
     height: 75px;
-    display: flex;    
+    display: flex;
     justify-content: center;
     max-height: 75px;
     align-items: center;
-    gap:80%;
+    gap: 80%;
     margin: 0 auto;
-    
+
 }
 
 .center {
@@ -44,7 +44,7 @@ html {
 .top__imgs {
     background-color: #F1E4E6;
     display: flex;
-    justify-content: left; 
+    justify-content: left;
 }
 
 .ltop__img {
@@ -64,7 +64,7 @@ html {
     justify-content: left;
     max-width: 405px;
     word-break: keep-all;
-    
+
 }
 
 .title {
@@ -89,7 +89,7 @@ html {
 }
 
 .cath {
-    padding-top: 65px;    
+    padding-top: 65px;
     display: grid;
     grid-template-columns: repeat(3, 36rem);
     gap: 3rem;
@@ -102,14 +102,14 @@ html {
 
 .cath__imgs {
     position: relative;
-  }
-  
+}
 
-.cath_img {   
+
+.cath_img {
     filter: brightness(30%);
     width: 100%;
     min-height: 100px;
-    object-fit: cover;    
+    object-fit: cover;
 }
 
 .text__overlay {
@@ -121,7 +121,7 @@ html {
     color: white;
     font-size: 24px;
     font-weight: bold;
-  }
+}
 
 .whitetitle {
     color: #FFF;
@@ -142,7 +142,7 @@ html {
 .feature_text {
     padding-top: 96px;
     display: flex;
-    text-align: center;    
+    text-align: center;
     flex-direction: column;
     padding-bottom: 47px;
 
@@ -153,7 +153,7 @@ h5 {
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;  
+    line-height: normal;
 }
 
 h6 {
@@ -179,17 +179,25 @@ h6 {
     position: relative;
 }
 
-.fitem:hover {
-    filter:brightness(30%);
+.item_sel {
+    position: relative;
 }
 
-.icon {
+.addtocart {
     position: absolute;
-    top: calc(50% - 10px);
-    left: calc(50% - 10px);
-    padding: 10px;
-    color: #fff;
-    font-size: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.item_sel:hover .fitem {
+    filter: brightness(30%);
+}
+
+.item_sel:hover .addtocart {
+    opacity: 1;
 }
 
 
@@ -219,7 +227,7 @@ h7 {
     font-size: 14px;
     font-style: normal;
     font-weight: 300;
-    line-height: normal; 
+    line-height: normal;
     width: 31.4743rem;
 
 }
@@ -237,6 +245,7 @@ h7 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 2;
 }
 
 .for2images {
@@ -249,7 +258,11 @@ h7 {
     height: 48px;
     color: #FF6A6A;
     background-color: #FFF;
-    border-color: #FF6A6A;;
+    border-color: #FF6A6A;    
+}
+
+.btn:hover {
+    background-color: rgb(255, 0, 238, 0.1);
 }
 
 .buttons {
@@ -271,9 +284,8 @@ h7 {
 .advantage {
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
     align-items: center;
-    
+
 }
 
 .adv__logo {
@@ -293,7 +305,17 @@ h7 {
     line-height: normal;
 }
 
-.adv__text {
+.advtext {
+    color: #FBFBFB;
+    text-align: center;
+    font-size: 13.972px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    max-width: 36rem;
+}
+
+.atext {
     color: #FBFBFB;
     text-align: center;
     font-size: 13.972px;
@@ -319,7 +341,7 @@ h7 {
     top: 0;
     left: 0;
     bottom: 0;
-    right: 0;    
+    right: 0;
     width: 100%;
     height: 100%;
     background-image: url(img/Layer\ 41.png);
@@ -334,7 +356,7 @@ h7 {
 
 .womanfigure {
     clip-path: circle(35% at center);
-    width: 14.5rem; 
+    width: 14.5rem;
     padding-top: 15px;
 }
 
@@ -354,7 +376,8 @@ h7 {
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
-    line-height: 167.2%; /* 40.128px */
+    line-height: 167.2%;
+    /* 40.128px */
 }
 
 .feedsubtitle {
@@ -401,8 +424,8 @@ h7 {
     background-color: #222224;
     height: 79px;
     display: flex;
-    justify-content:space-around;
-    align-items: center;    
+    justify-content: space-around;
+    align-items: center;
 }
 
 .rights {
@@ -423,11 +446,11 @@ h7 {
     width: 31.5px;
     height: 32px;
     display: flex;
-    justify-content: center;    
+    justify-content: center;
     align-items: center;
 }
 
-.pink {
+.square:hover {
     background-color: #F16D7F;
 }
 
@@ -447,7 +470,7 @@ h7 {
     }
 
     .upper__line {
-        gap:65%
+        gap: 65%
     }
 
     .ltop__img {
@@ -457,10 +480,11 @@ h7 {
     .title {
         font-size: 44px;
     }
-    
+
     .subtitle {
         font-size: 28px;
     }
+
     .subtitle2 {
         font-size: 28px;
     }
@@ -470,9 +494,9 @@ h7 {
         display: grid;
         grid-template-columns: repeat(3, 23.1rem);
         gap: 2rem;
-        
+
     }
-    
+
     .pinksubtitle {
         font-size: 25px;
     }
@@ -480,9 +504,9 @@ h7 {
     .feature_text {
         padding-top: 110px;
         padding-bottom: 74px;
-    
+
     }
-    
+
     .fitems {
         gap: 1.6rem;
         grid-template-columns: repeat(2, 36rem);
@@ -497,14 +521,14 @@ h7 {
         flex-direction: column;
         justify-content: space-around;
         justify-items: center;
-        min-width: 76.8rem;  
+        min-width: 76.8rem;
         height: 693px;
 
     }
 
     .feedback::before {
         background: url(img/Layer\ 42.png), lightgray -416.458px -261.422px / 322.249% 246.875% no-repeat;
-    }    
+    }
 }
 
 @media (max-width: 767px) {
@@ -516,7 +540,7 @@ h7 {
     }
 
     .upper__line {
-        gap:32%
+        gap: 32%
     }
 
     .top__imgs {
@@ -539,10 +563,11 @@ h7 {
     .title {
         font-size: 38px;
     }
-    
+
     .subtitle {
         font-size: 20px;
     }
+
     .subtitle2 {
         font-size: 20px;
     }
@@ -550,12 +575,12 @@ h7 {
 
     .cath {
         display: flex;
-        flex-direction: column;     
+        flex-direction: column;
 
         gap: 3.2rem;
-        
+
     }
-    
+
     .pinksubtitle {
         font-size: 24px;
     }
@@ -567,9 +592,9 @@ h7 {
     .feature_text {
         padding-top: 110px;
         padding-bottom: 74px;
-    
+
     }
-    
+
     .fitems {
         gap: 1.6rem;
         grid-template-columns: repeat(1, 35.9rem);
@@ -586,11 +611,11 @@ h7 {
         min-width: 37rem;
         height: 610px;
     }
-    
+
     .feedback::before {
-        background: url(img/Layer\ 42.png), rgb(244, 244, 244, 0.70)  no-repeat;
+        background: url(img/Layer\ 42.png), rgb(244, 244, 244, 0.70) no-repeat;
     }
-    
+
     .footer {
         height: 143px;
         flex-direction: column-reverse;
@@ -599,5 +624,5 @@ h7 {
     .social {
         margin-top: 40px;
     }
-    
+
 }
