@@ -1,0 +1,7 @@
+.svgimg:hover path{
+    fill: purple
+}
+
+.svgimg:active path{
+    fill: yellow;
+}

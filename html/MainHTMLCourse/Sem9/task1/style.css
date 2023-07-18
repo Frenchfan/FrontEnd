@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.menu__link:hover {
+    color: red;
+}
+
+/* нажатие */
+.menu__link:active {
+    color: green;
+}
+
+.menu__list:first-child .menu__link {
+    text-decoration: underline;
+}
+
+.menu__list:last-child .menu__link {
+    font-weight: bold;
+}
+
+.menu__list:nth-child(3) .menu__link {
+    background-color: orange;
+}
