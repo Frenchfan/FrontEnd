@@ -37,8 +37,78 @@ html {
     gap: 80%;
 }
 
-.upper__button {
-    max-height: 29px;
+.upper__right {
+    display: flex;
+    gap:3.3rem;    
+}
+
+.menu {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown_menu {
+    display: none;
+    flex-direction:column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    min-width: 100px;
+    padding: 10px;
+    z-index: 1;
+    width: 23.2rem;
+    height: 614px;
+}
+
+.menu:hover .dropdown_menu {
+    display:block;
+}
+
+.menu__items {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu__header {
+    padding-left: 32px;
+    padding-top: 32px;
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.menu__item {
+    padding-left: 32px;
+    color: #F16D7F;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-top: 24px;
+}
+
+.submenu__item {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    padding-left: 52px;
+    padding-top: 12px;
+    color: #6F6E6E;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
 }
 
 .top__imgs {
@@ -268,6 +338,7 @@ h7 {
 
 .btn:hover {
     background-color: rgb(255, 0, 238, 0.1);
+    cursor: pointer;
 }
 
 .buttons {
@@ -425,6 +496,10 @@ h7 {
     line-height: normal;
 }
 
+.sub__button:hover {
+    cursor: pointer;
+}
+
 .footer {
     background-color: #222224;
     height: 79px;
@@ -538,6 +613,14 @@ h7 {
 
 @media (max-width: 767px) {
 
+    .upper__personal, .upper__basket {
+        display: none;
+    }
+
+    .upper__right {
+        justify-content: right;
+    }
+
 
     .center {
         padding-left: 5%;
@@ -545,7 +628,7 @@ h7 {
     }
 
     .upper__line {
-        gap: 32%
+        gap: 20rem;
     }
 
     .top__imgs {
