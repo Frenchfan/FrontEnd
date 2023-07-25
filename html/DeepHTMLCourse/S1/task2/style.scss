@@ -1,0 +1,42 @@
+@import 'vars';
+@import 'mixin';
+
+* {
+    margin: 0;
+    padding: 0;    
+}
+
+%message-shared {
+    font-family: sans-serif;
+    font-style: normal;
+  }
+  
+
+// комментарий
+.container {
+    width: $widthSite;
+
+    &__text {
+        color: $textColor;
+    }
+}
+
+.nav {
+    display: flex;
+    gap: $gap;
+
+    &__link {
+        @extend %message-shared;
+        text-decoration: none;
+    }
+}
+
+.content {
+    @include centerflex();
+    gap: $gap;
+
+    &__item {
+        width: $widthSite/4;
+        border: $myborder;
+    }
+}

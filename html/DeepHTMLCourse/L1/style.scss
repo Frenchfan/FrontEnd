@@ -1,0 +1,62 @@
+@import 'var';
+@import 'mixins';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.center {
+    padding-left: calc(50% - $widthSite / 2);
+    padding-right: calc(50% - $widthSite / 2);
+
+}
+
+.product {
+    width: 360px;
+
+    &__content {
+        background-color: #F8F8F8;
+        padding: 24px 16px;
+    }
+}
+
+.header {
+    background-color: $backBlock;
+}
+
+.title {
+    text-align: center;
+    color: red;
+}
+
+
+.top-head__heading {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: $colorSelectSite;
+}
+
+.breadcrumbs__link {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: #636363;
+}
+
+.breadcrumbs__link_site {
+    font-weight: 700;
+    color: $colorSelectSite;
+}
