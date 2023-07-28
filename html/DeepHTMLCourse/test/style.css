@@ -1,0 +1,43 @@
+.cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.cont__menu:hover .cont__menu__drop {
+  display: block;
+}
+.cont__menu {
+  font-size: 24px;
+  color: green;
+  position: relative;
+  cursor: pointer;
+}
+.cont__menu__drop {
+  position: absolute;
+  color: blue;
+  font-size: 32px;
+  display: none;
+  width: 20rem;
+  border: 1px black solid;
+}
+.cont__menu__drop .summary {
+  list-style-type: none;
+}
+.cont__menu__drop .subitem {
+  color: purple;
+  font-size: 15px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+}
+.cont__menu__drop .item {
+  padding-left: 15px;
+  border-left: darkmagenta 6px solid;
+  border-bottom: grey 1px solid;
+  margin-right: 15px;
+  margin-bottom: 20px;
+}
+.cont summary {
+  list-style-type: none;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */

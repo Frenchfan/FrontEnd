@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+  details {
+    display: inline-block;
+    position: relative;
+  }
+   summary {
+    cursor: pointer;
+    padding: 5px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+   details > div {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    display: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+  }
+   details[open] > div {
+    display: block;
+  }
+   input[type="checkbox"] {
+    display: none;
+  }
+   input[type="checkbox"] + label {
+    display: block;
+    padding: 5px;
+    cursor: pointer;
+  }
+   input[type="checkbox"]:checked + label {
+    background-color: #f0f0f0;
+  }
+</style>
+ <details>
+  <summary>Dropdown Menu</summary>
+  <div>
+    <input type="checkbox" id="option1">
+    <label for="option1">Option 1</label>
+    <input type="checkbox" id="option2">
+    <label for="option2">Option 2</label>
+    <input type="checkbox" id="option3">
+    <label for="option3">Option 3</label>
+  </div>
+</details>
+</body>
+</html>

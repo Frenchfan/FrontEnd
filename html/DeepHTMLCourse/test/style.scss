@@ -1,0 +1,46 @@
+.cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    height: 100vh;
+    &__menu:hover &__menu__drop{
+        display: block;
+    }
+    &__menu {
+        font-size: 24px;
+        color: green;
+        position: relative;
+        cursor: pointer;
+
+        &__drop {
+            position: absolute;
+            color: blue;
+            font-size: 32px;
+            display: none;
+            width: 20rem;
+            border: 1px black solid;
+
+            .summary{
+                list-style-type: none;
+            }
+            .subitem {
+                color: purple;
+                font-size: 15px;
+                padding-bottom: 20px;
+                padding-left: 10px;
+            }    
+            .item {
+                padding-left: 15px;
+                border-left: darkmagenta 6px solid;
+                border-bottom: grey 1px solid;
+                margin-right: 15px;
+                margin-bottom: 20px;
+            }
+        }        
+    }
+    summary {
+        list-style-type: none;
+        cursor: pointer;
+    } 
+}
+
