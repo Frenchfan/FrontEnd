@@ -129,16 +129,72 @@ a:visited {
   align-items: center;
   justify-content: flex-start;
 }
-.choose__line .choose__text__filter {
+.choose__line .filter {
+  cursor: pointer;
+}
+.choose__line .filter__sign {
+  position: relative;
+  display: inline;
+  padding-right: 38rem;
+}
+.choose__line .filter__block {
+  display: flex;
+  align-items: center;
+}
+.choose__line .filter__block .choose__text__filter {
   color: #000;
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
 }
-.choose__line .chooser__extra {
+.choose__line .filter__block .chooser__extra {
   padding-left: 1rem;
   padding-right: 28.5%;
+}
+.choose__line .filter__dmenu {
+  position: absolute;
+  display: none;
+  width: 36rem;
+  background-color: #fff;
+  z-index: 2;
+}
+.choose__line .filter__dmenu__item {
+  color: #EF5B70;
+  display: flex;
+  align-items: center;
+  height: 37px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  padding-left: 15px;
+  border-left: #F16D7F 6px solid;
+  border-bottom: #EBEBEB 1px solid;
+  margin-right: 33px;
+}
+.choose__line .filter__dmenu__subitem {
+  color: #6F6E6E;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  padding-left: 20px;
+}
+.choose__line .filter__dmenu__subitem:hover {
+  color: #F16D7F;
+}
+.choose__line .filter__dmenu summary {
+  list-style-type: none;
+  cursor: pointer;
+  padding-bottom: 24px;
+}
+.choose__line .filter__dmenu .subitems {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  padding-bottom: 24px;
+}
+.choose__line .filter:hover .filter__dmenu {
+  display: block;
 }
 .choose__line .choose__text {
   color: #6F6E6E;
@@ -150,11 +206,44 @@ a:visited {
   padding-left: 1rem;
   padding-right: 2rem;
 }
-.choose__line .chooser:hover path, .choose__line .chooser__extra:hover path {
+.choose__line .sizeb {
+  position: relative;
+}
+.choose__line .sizeb .size__sign {
+  display: flex;
+  align-items: center;
+}
+.choose__line .sizeb .dmenu2 {
+  position: absolute;
+  display: none;
+  width: 7.9rem;
+  background-color: #FFF;
+  z-index: 4;
+}
+.choose__line .sizeb .dmenu2__item {
+  color: #6F6E6E;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  padding-left: 9px;
+}
+.choose__line .sizeb .dmenu2__items {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+.choose__line .sizeb:hover .dmenu2 {
+  display: block;
+}
+.choose__line .chooser:hover path,
+.choose__line .chooser__extra:hover path {
   fill: pink;
   cursor: pointer;
 }
-.choose__line .choose__text:hover, .choose__line .choose__text__filter:hover {
+.choose__line .choose__text:hover,
+.choose__line .choose__text__filter:hover {
   color: pink;
   cursor: pointer;
 }
