@@ -6,7 +6,7 @@
 }
 
 html {
-    font-size: 10px;
+    font-size: 10px; 
 }
 
 .upper__line {
@@ -152,6 +152,7 @@ a:visited {
 .subtitle2 {
     color: #F16D7D;
     font-size: 32px;
+    font-weight: 900;    
 }
 
 .subtitles {
