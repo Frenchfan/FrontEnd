@@ -1,0 +1,22 @@
+.dsc {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.dsc-1 {
+    background-color: gold;
+}
+
+.dsc-2 {
+    background-color: pink;
+    position: absolute;
+    /* left: -10000px; */
+    /* bottom: 50px; */
+    bottom: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.dsc-3 {
+    background-color: aqua;
+}
