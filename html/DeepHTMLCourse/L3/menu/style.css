@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    background-color: #ccc;
+    min-height: 700px;
+}
+
+
+.menu {
+    position: sticky;
+    width: 20%;
+    top: 20%;
+    margin-left: 10%;
+    margin-bottom: 10%;
+}
+.main   {
+    margin-left: 25%;
+}
+
+html {
+    scroll-behavior: smooth;
+}

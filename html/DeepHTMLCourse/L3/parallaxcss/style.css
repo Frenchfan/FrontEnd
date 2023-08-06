@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    background-color: #ccc;
+    height: 700px;
+}
+
+.parallax {
+    min-height: 250px;
+    background-image: url(https://img.freepik.com/free-photo/abstract-pool-water-surface-background-with-sun-light-reflection_74190-8510.jpg?w=826&t=st=1691312929~exp=1691313529~hmac=5e92b58d466bea4b84cbf824d3200cb96e888627954a7f40e9ece773be2e5c4d);
+    background-attachment: fixed;
+}
+
+.content-header {
+    height: 50px;
+    background-color: #555;
+    position: sticky;
+    top: 0;
+}

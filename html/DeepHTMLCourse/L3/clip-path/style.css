@@ -1,0 +1,23 @@
+.item {
+    height: 400px;
+    background-color: #913434;
+}
+
+.item1 {
+    clip-path: circle(150px at 5px 200px);
+    background-image: url(https://img.freepik.com/free-photo/beautiful-panoramic-shot-new-york-city_181624-433.jpg?t=st=1691314914~exp=1691315514~hmac=c76352de5bedf58bfb3644d0f1aa0f4a873c931465c9976f502ec76991942076);
+    background-size: cover;
+}
+
+.item2 {
+    clip-path: ellipse(130px 140px at 20% 30%);
+}
+
+.item3 {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.item4 {
+    clip-path: polygon(50% 10%, 12% 100%, 30% 40%, 0% 25%);
+    background-image: url(https://img.freepik.com/free-photo/beautiful-panoramic-shot-new-york-city_181624-433.jpg?t=st=1691314914~exp=1691315514~hmac=c76352de5bedf58bfb3644d0f1aa0f4a873c931465c9976f502ec76991942076);
+}
