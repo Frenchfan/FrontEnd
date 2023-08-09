@@ -3,6 +3,8 @@ package com.example.reactive.REST.controller;
 import com.example.reactive.REST.model.Temperature;
 import com.example.reactive.REST.repository.TemperatureRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.context.ApplicationContext;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -46,6 +48,14 @@ public class TemperatureController extends BaseController<Temperature, Integer, 
                     c.setFarenheit(temperature.getFarenheit());
                     return c;
                 }).flatMap(c -> repository.save(c));
+    }
+
+    @Autowired
+    private ApplicationContext context;
+    @GetMapping("/shutdown")
+    public void shutdownApp() {
+        int exitCode = SpringApplication.exit(context, () -> 0);
+        System.exit(exitCode);
     }
 
     // @DeleteMapping("/{id}")

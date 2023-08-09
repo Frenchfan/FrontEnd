@@ -11,7 +11,7 @@ function convertTemperature() {
         "farenheit": fahrenheit
     };
 
-    fetch('http://95.140.156.17:8082/api/gb/temperature', {
+    fetch('https://365ingame.hopto.org/gb/temperature', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
@@ -28,7 +28,7 @@ function convertTemperature() {
 }
 
 function updateTemperatureTable(newData) {
-    fetch('http://95.140.156.17:8082/api/gb/temperature/last/3')
+    fetch('https://365ingame.hopto.org/gb/temperature/last/3')
         .then(response => response.json()
             .then(data => {
                 const temperatureTable = document.getElementById('temperatureTable');
