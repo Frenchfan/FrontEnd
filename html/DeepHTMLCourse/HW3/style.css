@@ -373,7 +373,7 @@ a {
   padding-top: 32px;
 }
 .low-part .feed__submit .input__field {
-  background-color: #E1E1E1;
+  background-color: #e1e1e1;
   border-radius: 50px;
   height: 46px;
   width: 32.3rem;
@@ -382,21 +382,23 @@ a {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  text-indent: 2rem;
 }
 .low-part .feed__submit .sub__button {
   margin-left: -65px;
   width: 10rem;
   height: 49px;
   border-radius: 0px 40px 40px 0px;
-  background-color: #E05C6E;
-  color: #FFF;
   text-align: center;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  background-color: rgb(212, 210, 210);
 }
 .low-part .feed__submit .sub__button:hover {
+  color: white;
+  background-color: #f16d7f;
   cursor: pointer;
 }
 
@@ -408,7 +410,7 @@ a {
   align-items: center;
 }
 .footer .rights {
-  color: #FBFBFB;
+  color: #fbfbfb;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -419,7 +421,7 @@ a {
   gap: 0.73rem;
 }
 .footer .social .square {
-  background-color: #FFF;
+  background-color: #fff;
   width: 31.5px;
   height: 32px;
   display: flex;
@@ -427,7 +429,7 @@ a {
   align-items: center;
 }
 .footer .social .square:hover {
-  background-color: #F16D7F;
+  background-color: #f16d7f;
 }
 .footer .social .network {
   height: 16px;
