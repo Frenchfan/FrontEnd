@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework</title>
+    <script src="1.js" defer></script>
+    <script src="2.js" defer></script>
+    <script src="3.js" defer></script>
+    <script src="4.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <fieldset class="inputGroup">
+      <legend>task1 - n^3</legend>
+      <input
+        id="cubic"
+        type="number"
+        placeholder="Введите число для возведения в куб"
+      />
+      <button id="cubicBtn">Вычислить куб</button>
+      <p id="cubicResult"></p>
+    </fieldset>
+    <fieldset class="inputGroup">
+      <legend>task2 - зарплата</legend>
+      <input
+        id="income"
+        type="number"
+        placeholder="Введите заработную плату рублях"
+      />
+      <button id="incomeBtn">Вычислить зарплату на руки</button>
+      <p id="netSalaryResult"></p>
+    </fieldset>
+    <fieldset class="inputGroup">
+      <legend>task3 - Max</legend>
+      <input id="param1" type="number" placeholder="Введите число" />
+      <input id="param2" type="number" placeholder="Введите число" />
+      <input id="param3" type="number" placeholder="Введите число" />
+      <button id="maxBtn">Найти максимум</button>
+      <p id="maxResult"></p>      
+    </fieldset>
+    <fieldset class="inputGroup">
+      <legend>task4 - мини-калькулятор</legend>
+      <input id="first" type="number" placeholder="Введите число" />
+      <input id="second" type="number" placeholder="Введите число" />
+      <div class="operations">
+        <button id="sumBtn" class="operation">+</button>
+        <button id="diffBtn" class="operation">-</button>
+        <button id="multiBtn" class="operation">*</button>
+        <button id="divBtn" class="operation">/</button>
+      </div>
+      <p id="calcResult"></p>
+  </body>
+</html>
