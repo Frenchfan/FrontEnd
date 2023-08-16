@@ -149,22 +149,22 @@ a:visited {
 .subcontainer {
   
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  width: 1600px
-}
-.main__container {
+  align-items: center;
   width: 100%;
+  
+  .main__container {
 
   margin-top: -65px;
   height: 664px;
-
+  width: 95%;
 
   .main__elements {
     max-width: 1141px;
     border: #000 1px solid;
     background-color: #fff;
     padding: 0 14.4%;
-    position: absolute;
     height: 601px;
     display: flex;
     flex-direction: column;
@@ -247,6 +247,8 @@ a:visited {
     }
   }
 }
+}
+
 
 .product-sec {
   padding: 0 14.4%;

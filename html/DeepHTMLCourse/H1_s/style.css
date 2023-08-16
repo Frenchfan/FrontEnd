@@ -135,42 +135,42 @@ a:visited {
 
 .subcontainer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  width: 1600px;
-}
-
-.main__container {
+  align-items: center;
   width: 100%;
+}
+.subcontainer .main__container {
   margin-top: -65px;
   height: 664px;
+  width: 95%;
 }
-.main__container .main__elements {
+.subcontainer .main__container .main__elements {
   max-width: 1141px;
   border: #000 1px solid;
   background-color: #fff;
   padding: 0 14.4%;
-  position: absolute;
   height: 601px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.main__container .main__elements .main__h4 {
+.subcontainer .main__container .main__elements .main__h4 {
   color: #F16D7F;
   font-size: 14px;
   font-style: normal;
   font-weight: 300;
   padding-bottom: 12px;
 }
-.main__container .main__elements .main__h3 {
+.subcontainer .main__container .main__elements .main__h3 {
   padding-top: 12px;
   color: #4d4d4d;
   font-size: 18px;
   font-style: normal;
   font-weight: 300;
 }
-.main__container .main__elements .main__text {
+.subcontainer .main__container .main__elements .main__text {
   padding-top: 49px;
   color: #5e5e5e;
   text-align: center;
@@ -179,7 +179,7 @@ a:visited {
   font-weight: 300;
   max-width: 55rem;
 }
-.main__container .main__elements .main__price {
+.subcontainer .main__container .main__elements .main__price {
   padding-top: 33px;
   color: #ef5b70;
   font-size: 24px;
@@ -187,32 +187,32 @@ a:visited {
   font-weight: 300;
   padding-bottom: 65px;
 }
-.main__container .main__elements .choose__line {
+.subcontainer .main__container .main__elements .choose__line {
   padding-top: 65px;
   display: flex;
 }
-.main__container .main__elements .choose__line .choose__text {
+.subcontainer .main__container .main__elements .choose__line .choose__text {
   color: #6f6e6e;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
 }
-.main__container .main__elements .choose__line .chooser {
+.subcontainer .main__container .main__elements .choose__line .chooser {
   padding-left: 1rem;
   padding-right: 2rem;
 }
-.main__container .main__elements .choose__line .chooser:hover path {
+.subcontainer .main__container .main__elements .choose__line .chooser:hover path {
   fill: pink;
   cursor: pointer;
 }
-.main__container .main__elements .choose__line .choose__text:hover {
+.subcontainer .main__container .main__elements .choose__line .choose__text:hover {
   color: pink;
   cursor: pointer;
 }
-.main__container .main__elements .button__container {
+.subcontainer .main__container .main__elements .button__container {
   padding-top: 48px;
 }
-.main__container .main__elements .add__to__cart {
+.subcontainer .main__container .main__elements .add__to__cart {
   width: 21.2rem;
   height: 48px;
   display: flex;
