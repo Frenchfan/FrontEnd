@@ -1,0 +1,165 @@
+@media (max-width: 1024px) {
+  .center {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+
+  .header__content {
+    &__right {
+      &__header {
+        font-size: 18px;
+      }
+      &__subheader {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .title {
+    font-size: 44px;
+  }
+
+  .subtitle {
+    font-size: 28px;
+  }
+
+  .subtitle2 {
+    font-size: 28px;
+  }
+
+  .cath {
+    display: grid;
+    grid-template-columns: repeat(3, 23.1rem);
+    gap: 2rem;
+  }
+
+  .pinksubtitle {
+    font-size: 25px;
+  }
+
+  .feature_text {
+    padding-top: 110px;
+    padding-bottom: 74px;
+  }
+
+  .product-sec {
+    padding: 0 0;
+  }
+
+  .advantages {
+    flex-direction: column;
+    min-height: 610px;
+    padding-top: 48px;
+    padding-bottom: 64px;
+  }
+
+  .feedback {
+    flex-direction: column;
+    justify-content: space-around;
+    justify-items: center;
+    min-width: 76.8rem;
+    height: 693px;
+  }
+
+  .feedback::before {
+    background: url(img/Layer\ 42.png),
+      lightgray -416.458px -261.422px / 322.249% 246.875% no-repeat;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    &__right__group {
+      width: 32px;
+    }
+    .upper__personal,
+    .upper__basket {
+      display: none;
+    }
+  }
+
+  .center {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+
+  .header__content {
+    height: 363px;
+    justify-content: center;
+    gap: 40px;
+    &__left {
+      display: none;
+    }
+
+    &__right {
+      &__header {
+        font-size: 38px;
+      }
+      &__subheader {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .title {
+    font-size: 38px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+
+  .subtitle2 {
+    font-size: 20px;
+  }
+
+  .cath {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3.2rem;
+  }
+
+  .pinksubtitle {
+    font-size: 24px;
+  }
+
+  .whitetitle {
+    font-size: 16px;
+  }
+
+  .feature_text {
+    padding-top: 110px;
+    padding-bottom: 74px;
+  }
+
+  .fitems {
+    gap: 1.6rem;
+    grid-template-columns: repeat(1, 35.9rem);
+  }
+
+  .advantages {
+    flex-direction: column;
+    min-height: 610px;
+  }
+
+  .feedback {
+    flex-direction: column;
+    justify-content: space-around;
+    min-width: 37rem;
+    height: 610px;
+  }
+
+  .feedback::before {
+    background: url(img/Layer\ 42.png), rgb(244, 244, 244, 0.7) no-repeat;
+  }
+
+  .footer {
+    height: 143px;
+    flex-direction: column-reverse;
+  }
+
+  .social {
+    margin-top: 40px;
+  }
+}

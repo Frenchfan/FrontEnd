@@ -1,0 +1,14 @@
+$widthSite: 1600px;
+$keyselColor: #F16D7F;
+$keyregColor:#636363;
+$darkBack: #222;
+$remSize: 10px;
+$darkColor:#222;
+$colorText: #000;
+$colorSelectSite: #F16D7F;
+
+@mixin centerflex($sidepadding: 14.4%, $height: 75px) {
+    padding: 0 $sidepadding;
+    height: $height;
+    display: flex;
+  }
