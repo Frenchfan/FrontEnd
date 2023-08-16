@@ -11,7 +11,10 @@
 Функциям всегда передаются корректные числа, проверки на NaN, Infinity делать не нужно. Демонстрировать работы функций не обязательно.
 */
 
-const operFun = (first, second, operation) => {
+function operFun(event) {
+  const first = Number(document.getElementById("first2").value);
+  const second = Number(document.getElementById("second2").value);
+  const operation = event.target.textContent;
   let result;
   switch (operation) {
     case "+":
@@ -32,16 +35,9 @@ const operFun = (first, second, operation) => {
   document.getElementById("calcResult2").textContent = result;
   document.getElementById("first2").value = null;
   document.getElementById("second2").value = null;
-};
-
-function handleClick(event) {
-  const first = Number(document.getElementById("first2").value);
-  const second = Number(document.getElementById("second2").value);
-  const operation = event.target.textContent;
-  operFun(first, second, operation);
 }
 
 const buttons = document.querySelectorAll(".operations2");
 buttons.forEach(button => {
-    button.addEventListener("click", handleClick);
+    button.addEventListener("click", operFun);
 });

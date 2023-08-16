@@ -3,249 +3,244 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cart page</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="fonts/stylesheet.css" />
+    <link rel="stylesheet" href="fonts/stylesheet.css">
   </head>
 
   <body>
-    <div class="header center">
-      <div class="header__left">
-        <a href="#" class="header__left__link">
-          <img src="img/header/logo.svg" alt="logo"
-        /></a>
-        <a href="#" class="header__left__link">
-          <img src="img/header/search.svg" alt="search" />
-        </a>
-      </div>
-      <div class="header__right">
-        <label for="burger">
-          <img
-            class="burger__menu"
-            src="img/header/menu.svg"
-            alt="burger-menu"
-          />
-        </label>
-        <input id="burger" type="checkbox" checked="false" />
-        <nav class="nav">
-          <ul class="header__right__menu">
-            <li class="header__right__menu__header">
-              <a class="header__right__menu__header" href="#">MENU</a>
-            </li>
-            <li class="header__right__menu__cath">
-              <a class="header__right__menu__cath" href="#">MAN</a>
-            </li>
-            <ul>
-              <li class="header__right__menu__subcath">
-                <a class="header__right__menu__subcath" href="#">Accessories</a>
-              </li>
-              <li class="header__right__menu__subcath">
-                <a class="header__right__menu__subcath" href="#">Bags</a>
-              </li>
-              <li class="header__right__menu__subcath">
-                <a class="header__right__menu__subcath" href="#">Denim</a>
-              </li>
-              <li class="header__right__menu__subcath">
-                <a class="header__right__menu__subcath" href="#">T-Shirts</a>
-              </li>
-            </ul>
-            <li class="header__right__menu__cath">
-              <a class="header__right__menu__cath" href="#">WOMAN</a>
-            </li>
-            <ul>
-              <li class="header__right__menu__subcath">
-                <a class="header__right__menu__subcath" href="#">Accessories</a>
-              </li>
-              <li class="header__right__menu__subcath">
-                <a class="header__right__menu__subcath" href="#"
-                  >Jackets & Coats</a
-                >
-              </li>
-              <li class="header__right__menu__subcath">
-                <a class="header__right__menu__subcath" href="#">Polos</a>
-              </li>
-              <li class="header__right__menu__subcath">
-                <a class="header__right__menu__subcath" href="#">T-Shirts</a>
-              </li>
-              <li class="header__right__menu__subcath">
-                <a class="header__right__menu__subcath" href="#">Shirts</a>
-              </li>
-            </ul>
-            <li class="header__right__menu__cath">
-              <a class="header__right__menu__cath" href="#">KIDS</a>
-            </li>
-            <ul>
-              <li class="header__right__menu__subcath">
-                <a class="header__right__menu__subcath" href="#">Accessories</a>
-              </li>
-              <li class="header__right__menu__subcath">
-                <a class="header__right__menu__subcath" href="#"
-                  >Jackets & Coats</a
-                >
-              </li>
-              <li class="header__right__menu__subcath">
-                <a class="header__right__menu__subcath" href="#">Polos</a>
-              </li>
-              <li class="header__right__menu__subcath">
-                <a class="header__right__menu__subcath" href="#">T-Shirts</a>
-              </li>
-              <li class="header__right__menu__subcath">
-                <a class="header__right__menu__subcath" href="#">Shirts</a>
-              </li>
-              <li class="header__right__menu__subcath">
-                <a class="header__right__menu__subcath" href="#">Bags</a>
-              </li>
-            </ul>
-          </ul>
-        </nav>
-        <a href="#" class="header__right__link">
-          <img src="img/header/personal.svg" alt="menu" />
-        </a>
-        <a href="#" class="header__right__link">
-          <img src="img/header/cart.svg" alt="menu" />
-        </a>
-      </div>
-    </div>
-    <div class="subheader center">
-      <p class="subheader__title">SHOPPING CART</p>
-    </div>
-    <div class="main__content center">
-      <div class="first__main__content">
-        <div class="product">
-          <div class="product__left">
-            <img
-              class="product__left__photo"
-              src="img/firstboy.svg"
-              alt="firstboy"
-            />
-            <div class="product__description">
-              <div class="product__description__header">
-                MANGO PEOPLE T-SHIRT
-              </div>
-              <div class="product__description__details">
-                Price:
-                <span class="product__description__details__special">$300</span>
-              </div>
-              <div class="product__description__details">Color: Red</div>
-              <div class="product__description__details">Size: XI</div>
-              <div class="product__description__details">
-                Quantity:
-                <span
-                  ><input
-                    type="text"
-                    class="product__description__details__input"
-                    value="2"
-                /></span>
+    <div class="container">
+      <div class="header center">
+        <div class="header__left__group">
+          <a href="#">
+            <img src="img/logo.svg" alt="logo" class="left__imgs" />
+          </a>
+          <a href="#">
+            <img src="img/search.svg" alt="search" class="left__imgs" />
+          </a>
+        </div>
+        <div class="header__right__group">
+          <div class="header__menu">
+            <a href="#"
+              ><img src="img/menu.svg" alt="personal" class="upper__menu"
+            /></a>
+            <div class="dropdown_menu">
+              <!-- Your menu items here -->
+              <div class="menu__items">
+                <div class="menu__header">MENU</div>
+                <div class="menu__item">
+                  <a href="#">MAN</a>
+                </div>
+                <div class="submenu__item">
+                  <a href="#">Accessories</a>
+                  <a href="#">Bags</a>
+                  <a href="#">Denim</a>
+                  <a href="#">T-Shirts</a>
+                </div>
+                <div class="menu__item">
+                  <a href="#">WOMAN</a>
+                </div>
+                <div class="submenu__item">
+                  <a href="#">Accessories</a>
+                  <a href="#">Jackets & Coats</a>
+                  <a href="#">Polos</a>
+                  <a href="#">T-Shirts</a>
+                  <a href="#">Shirts</a>
+                </div>
+                <div class="menu__item">
+                  <a href="#">KIDS</a>
+                </div>
+                <div class="submenu__item">
+                  <a href="#">Accessories</a>
+                  <a href="#">Jackets & Coats</a>
+                  <a href="#">Polos</a>
+                  <a href="#">T-Shirts</a>
+                  <a href="#">Shirts</a>
+                  <a href="#">Bags</a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="address">
-          <div class="address__header">SHIPPING ADDRESS</div>
-          <div class="address__details">
-            <input
-              class="address__details__text address__details__text__blurred"
-              type="text"
-              placeholder="Bangladesh"
+          <a href="#">
+            <img
+              src="img/personal.svg"
+              alt="personal"
+              class="upper__personal"
             />
-            <input class="address__details__text" type="text" placeholder="State" />
-            <input
-              class="address__details__text"
-              type="text"
-              placeholder="Postcode / Zip"
-            />
-          </div>
-          <input
-            class="address__details__button"
-            type="button"
-            value="GET A QUOTE"
-          />
+          </a>
+          <a href="#">
+            <img src="img/cart.svg" alt="basket" class="upper__basket" />
+          </a>
         </div>
       </div>
-      <div class="second__main__content">
-        <div class="product">
-          <div class="product__left">
-            <img
-              class="product__left__photo"
-              src="img/secondboy.svg"
-              alt="firstboy"
-            />
-            <div class="product__description">
-              <div class="product__description__header">
-                MANGO PEOPLE T-SHIRT
+      <div class="subheader center">
+        <p class="subheader__title">SHOPPING CART</p>
+      </div>
+      <div class="main__content center">
+        <div class="first__main__content">
+          <div class="products">
+            <div class="product">
+              <div class="product__left">
+                <img
+                  class="product__left__photo"
+                  src="img/firstboy.svg"
+                  alt="firstboy"
+                />
+                <div class="product__description">
+                  <div class="product__description__header">
+                    MANGO PEOPLE T-SHIRT
+                  </div>
+                  <div class="product__description__details">
+                    Price:
+                    <span class="product__description__details__special"
+                      >$300</span
+                    >
+                  </div>
+                  <div class="product__description__details">Color: Red</div>
+                  <div class="product__description__details">Size: XI</div>
+                  <div class="product__description__details">
+                    Quantity:
+                    <span
+                      ><input
+                        type="text"
+                        class="product__description__details__input"
+                        value="2"
+                    /></span>
+                  </div>
+                </div>
               </div>
-              <div class="product__description__details">
-                Price:
-                <span class="product__description__details__special">$300</span>
-              </div>
-              <div class="product__description__details">Color: Red</div>
-              <div class="product__description__details">Size: XI</div>
-              <div class="product__description__details">
-                Quantity:
-                <span
-                  ><input
-                    type="text"
-                    class="product__description__details__input"
-                    value="2"
-                /></span>
+            </div>
+            <div class="product">
+              <div class="product__left">
+                <img
+                  class="product__left__photo"
+                  src="img/secondboy.svg"
+                  alt="firstboy"
+                />
+                <div class="product__description">
+                  <div class="product__description__header">
+                    MANGO PEOPLE T-SHIRT
+                  </div>
+                  <div class="product__description__details">
+                    Price:
+                    <span class="product__description__details__special"
+                      >$300</span
+                    >
+                  </div>
+                  <div class="product__description__details">Color: Red</div>
+                  <div class="product__description__details">Size: XI</div>
+                  <div class="product__description__details">
+                    Quantity:
+                    <span
+                      ><input
+                        type="text"
+                        class="product__description__details__input"
+                        value="2"
+                    /></span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+          <div class="shopping__buttons">
+            <input
+              class="clear__button"
+              type="button"
+              value="CLEAR SHOPPING CART"
+            />
+            <input
+              class="continue__button"
+              type="button"
+              value="CONTINUE SHOPPING"
+            />
+          </div>
         </div>
-        <div class="checkout">
-          <div class="checkout__subheader">
-            SUB
-            TOTAL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$900
+        <div class="second__main__content">
+          <div class="address">
+            <div class="address__header">SHIPPING ADDRESS</div>
+            <div class="address__details">
+              <input
+                class="address__details__text address__details__text__blurred"
+                type="text"
+                placeholder="Bangladesh"
+              />
+              <input
+                class="address__details__text"
+                type="text"
+                placeholder="State"
+              />
+              <input
+                class="address__details__text"
+                type="text"
+                placeholder="Postcode / Zip"
+              />
+            </div>
+            <input
+              class="address__details__button"
+              type="button"
+              value="GET A QUOTE"
+            />
           </div>
-          <div class="checkout__header">
-            GRAND TOTAL
-            <span class="checkout__header__text"
-              >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$900</span
-            >
+          <div class="checkout">
+            <div class="checkout__subheader">
+              SUB
+              TOTAL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$900
+            </div>
+            <div class="checkout__header">
+              GRAND TOTAL
+              <span class="checkout__header__text"
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$900</span
+              >
+            </div>
+            <hr />
+            <input
+              class="checkout__button"
+              type="button"
+              value="PROCEED TO CHECKOUT"
+            />
           </div>
-          <hr />
-          <input
-            class="checkout__button"
-            type="button"
-            value="PROCEED TO CHECKOUT"
-          />
         </div>
       </div>
-      <div class="shopping__buttons">
-        <input class="clear__button" type="button" value="CLEAR SHOPPING CART">
-        <input class="continue__button" type="button" value="CONTINUE SHOPPING">
-
-      </div>
-    </div>
-    
-    <div class="low-part">
-      <div class="feedback">
+      <div class="low-part">
+        <div class="feedback">
           <figure class="figure">
-              <img src="img/low-part/woman.png" alt="woman" class="womanfigure">
-              <figcaption class="figcaption">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum“</figcaption>
+            <img src="img/woman.png" alt="woman" class="womanfigure" />
+            <figcaption class="figcaption">
+              “Vestibulum quis porttitor dui! Quisque viverra nunc mi, a
+              pulvinar purus condimentum“
+            </figcaption>
           </figure>
           <div class="rightfeed">
-              <p class="feedtitle">SUBSCRIBE</p>
-              <p class="feedsubtitle">FOR OUR NEWSLETTER AND PROMOTION</p>
-              <div class="feed__submit">
-                  <form action="#"></form>
-                  <input id="email" placeholder="Enter Your Email" class="input__field">
-                  <button type="submit" class="sub__button">Subscribe</button>
-              </div>
+            <p class="feedtitle">SUBSCRIBE</p>
+            <p class="feedsubtitle">FOR OUR NEWSLETTER AND PROMOTION</p>
+            <div class="feed__submit">
+              <form action="#"></form>
+              <input
+                id="email"
+                placeholder="Enter Your Email"
+                class="input__field"
+              />
+              <button type="submit" class="sub__button">Subscribe</button>
+            </div>
           </div>
+        </div>
       </div>
-  </div>
 
-  <footer class="footer">
-      <p class="rights">© 2023 Brand All Rights Reserved.</p>
-      <div class="social">
+      <footer class="footer">
+        <p class="rights">© 2023 Brand All Rights Reserved.</p>
+        <div class="social">
           <a href="#">
-              <div class="square"><img src="img/footer/pinterest.svg" alt="pinterest" class="network"></div>
+            <div class="square">
+              <img src="img/pinterest.svg" alt="pinterest" class="network" />
+            </div>
           </a>
           <a href="#">
-              <div class="square"><img src="img/footer/twitter.svg" alt="twitter" class="network"></div>
+            <div class="square">
+              <img src="img/twitter.svg" alt="twitter" class="network" />
+            </div>
           </a>
-      </div>
-  </footer>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
