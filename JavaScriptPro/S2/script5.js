@@ -24,7 +24,7 @@ class BankAccount {
         }
     }
     introduce() {
-        console.log (`${this.accountNumber} , balance =  ${this.balance} .`);
+        console.log (`account numer = ${this.accountNumber} , balance =  ${this.balance} .`);
     }
 }
 
