@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW2</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <style>
+        th a {
+            text-decoration: underline;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <table :style="tableStyle">
+          <thead :style="theadStyle">
+          <tr>
+            <th :style="tdStyle"
+                @click="sortProducts('name')"><a>наименование</a>
+            </th>
+            <th :style="tdStyle"
+                @click="sortProducts('price')"><a>цена</a>
+            </th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr v-for="product in products">
+            <td :style="tdStyle">{{product.name}}</td>
+            <td :style="tdStyle">{{product.price}}</td>
+          </tr>
+          </tbody>
+          <tfoot>
+          <tr>
+            <th>Порядок:</th>
+            <th>{{sorting}}</th>
+          </tr>
+          </tfoot>
+        </table>
+      </div>
+      <script>
+        const app = Vue.createApp({
+          data() {
+            return {
+              products: [
+                {name: "яблоки", price: 16},
+                {name: "груши", price: 5},
+                {name: "апельсины", price: 32},
+                {name: "дыни", price: 54},
+              ],
+              asc: "None",
+              tableStyle: {
+                maxWidth: 1200,
+                margin: "0 auto",
+                borderCollapse: "collapse",
+                border: "1px solid teal",
+              },
+              theadStyle: {
+                cursor: "pointer"
+              },
+              tdStyle: {
+                padding: "10px 20px",
+                border: "1px solid teal",
+              },
+            };
+          },
+          methods: {
+            sortProducts(value) {
+              this.products.sort((a, b) => this.asc ? a[value] > b[value] ? -1 : 1 : b[value] > a[value] ? -1 : 1);
+              this.asc = !this.asc;
+            },
+          },
+          computed: {
+            sorting() {
+              if (this.asc === "None") return this.asc;
+              if (this.asc) return "по возрастанию";
+              return "по убыванию";
+            },
+          }
+        });
+        app.mount("#app");
+      </script>
+</body>
+</html>
