@@ -1,0 +1,41 @@
+.hero {
+  &__wrapper {
+    min-height: 100vh;
+    padding: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: url('../../img/hero/Image.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50px;
+  }
+  &__intro {
+    max-width: 450px;
+  }
+  &__title {
+    color: $primary2;
+    margin-bottom: 18px;
+    font-size: 65px;
+  }
+  &__text {
+    color: $text1;
+    margin-bottom: 21px;
+    font-size: 22px;
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 26px 48px;
+    color: #ffffff;
+    background-color: $primary2;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+    &:hover, &:active {
+      background-color: $text1;
+    }
+  }
+}

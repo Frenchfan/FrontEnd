@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"
+          content="ie=edge">
+    <title>Task 2 HW1 </title>
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <style>
+    .task {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    .subtask {
+      padding: 15px 30px;
+      margin-bottom: 15px;
+      border: 1px solid teal;
+      border-radius: 15px;
+    }
+  </style>
+  <body>
+    <div class="task"
+         id="app">
+      <div class="subtask">
+        <button @click="reverseText">{{message}}</button>
+      </div>
+      <div class="subtask">
+        <label for="newMessage">Your message:</label>
+        <input type="text"
+               name="newMessage"
+               id="newMessage"
+               placeholder="New Message..."
+               v-model="newMessage">
+        <button @click="pushMessage">Add new element</button>
+        <ul>
+          <li v-for="(element, idx) in elements">
+            {{element.el}}
+            <button @click="delElement(idx)">Delete</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {
+            message: "Text to test",
+            elements: [{
+              el: "first",
+            }, {
+              el: "second",
+            },],
+            newMessage: "",
+          };
+        },
+        methods: {
+          reverseText() {
+            this.message = this.message.split("").reverse().join("");
+          },
+          delElement(idx) {
+            this.elements = [...this.elements.slice(0, idx), ...this.elements.slice(idx + 1)];
+          },
+          pushMessage() {
+            if (!this.newMessage) return;
+            this.elements = [...this.elements, {el: this.newMessage}];
+          }
+        }
+
+      }).mount("#app");
+    </script>
+  </body>
+</html>

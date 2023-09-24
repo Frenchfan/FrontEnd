@@ -1,0 +1,15 @@
+.nav{
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  &__item {
+    list-style-type: none;
+  }
+  &__link {
+    text-decoration: none;
+    font-size: 20px;
+    color: $primary2;
+  }
+}

@@ -1,0 +1,370 @@
+// Часть 1: Данное задание направлено на подготовку проекта к итоговой аттестации.
+
+// По заданному макету https://www.figma.com/file/okdYD45Tj2JpKsNASccUmf/Interior-Design-Webflow-Website-Template-(Community)-(Copy)-(Copy)?type=design&node-id=101-14&t=hPokjgMtIgcsYlyO-0 создать верстку главной страницы (без использования vue).
+
+// Часть 2. ### Задачи по vue
+// 1. Создать кнопку "Перевернуть". При клике на кнопку текст кнопки, должен перевернуться и отобразиться в обратном порядке.
+// 2. Есть список элементов. Пользователь может добавлять новые элементы списка с текстом “Новый элемент списка” нажав на кнопку "Добавить".
+// 3. * При клике на элемент списка он должен быть удален. (по желанию)
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.center {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@font-face {
+  font-family: "DM Serif Display", "Open Sans", sans-serif;
+  src: url("font/DMSerifDisplay-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Jost", "Open Sans", sans-serif;
+  src: url("font/Jost-VariableFont_wght.ttf") format("truetype");
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "DM Serif Display", serif;
+}
+
+.upper_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  &_left {
+    display: flex;
+    gap: 10px;
+
+    .logoName {
+      color: #292f36;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 125%; /* 50px */
+    }
+  }
+
+  &_left:hover {
+    cursor: pointer;
+  }
+
+  &_right {
+    margin-right: 10px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 40%;
+
+    .upper_header_menu {
+      color: #292f36;
+      text-align: center;
+      font-family: "Jost", sans-serif;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 125%; /* 25px */
+    }
+
+    .upper_header_menu:hover {
+      color: aqua;
+    }
+  }
+}
+
+.first_image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 70px;
+
+  &_image {
+    height: 100vh;
+    border-radius: 50px;
+    width: 100%;
+  }
+
+  &_text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-left: 30px;
+    text-align: left;
+    transform: translateY(-50%);
+
+    &_big {
+      color: #292f36;
+      width: 434px;
+      font-size: 65px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 125%; /* 81.25px */
+      padding-bottom: 18px;
+    }
+
+    &_small {
+      width: 433px;
+      color: #4d5053;
+      font-family: Jost, sans-serif;
+      font-size: 22px;
+      line-height: 150%;
+      letter-spacing: 0.22px;
+      padding-bottom: 21px;
+    }
+
+    &_button {
+      border-radius: 18px;
+      background: #292f36;
+      box-shadow: 0 10px 20px 0 rgba(192, 192, 192, 0.35);
+      color: #FFF;
+      width: 220px;
+      height: 75px;
+      font-size: 18px;
+      font-weight: 600;
+      font-family: 'Jost', sans-serif;
+    }
+
+    &_button:hover {
+      cursor: pointer;
+      color: aqua;
+    }
+  }
+}
+
+.middle_text_1 {
+  text-align: center;
+  color: #292F36;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%; /* 62.5px */
+  letter-spacing: 1px;
+  padding-bottom: 8px;
+}
+
+.middle_text_2 {
+  text-align: center;
+  color: #4D5053;
+  font-family: 'Jost', sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 33px */
+  letter-spacing: 0.22px;
+  width: 811px;
+  padding-bottom: 70px;
+}
+
+.kitchens {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 96px;
+
+  .kitchen--top-left {
+    border-radius: 0 20% 0 0;
+  }
+
+  .kitchen--top-right {
+    border-radius: 20% 0 0 0;
+  }
+
+  .kitchen--bottom-left {
+    border-radius: 0 0 20% 0;
+  }
+
+  .kitchen--bottom-right {
+    border-radius: 0 0 0 20%;
+  }
+
+  .kitchen {
+    flex-basis: 45%;
+    padding-bottom: 56px;
+
+    &_image {
+      width: 100%;
+    }
+
+    &_below__image {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .kitchen_below__image__text_big_caption {
+        padding-top: 24px;
+        color: #292F36;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 125%;
+        letter-spacing: 0.5px;
+        padding-bottom: 5px;
+      }
+
+      .kitchen_arrow {
+        padding-top: 10px;
+
+        &:hover {
+          filter: hue-rotate(90deg);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &_small_caption {
+    color: #4D5053;
+    font-family: 'Jost', sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.22px;
+  }
+
+}
+
+.achievements {
+  height: 457px;
+  background-color: #F4F0EC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15% 0 15%;
+  margin-bottom: 96px;
+
+  .achievement--middle {
+    border-right: #CDA274 1px solid;
+  }
+
+  .achievement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 250px;
+
+
+    &_number {
+      color: #CDA274;
+      font-family: "DM Serif Display", sans-serif;
+      font-size: 85px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 125%; /* 106.25px */
+      letter-spacing: 1.7px;
+    }
+
+    &_text {
+      color: #4D5053;
+      font-family: Jost, sans-serif;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 33px */
+      letter-spacing: 0.22px;
+    }
+  }
+}
+
+.articles {
+  display: flex;
+
+  .subarticle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 380px;
+    height: 520px;
+    border: 1px solid #E7E7E7;
+    border-radius: 15% 15% 15% 15%;
+
+
+    .article {
+      width: 340px;
+      height: 480px;
+
+      .image_heading {
+        position: relative;
+
+
+        .article_image {
+          border-radius: 20% 20% 0 0;
+        }
+
+        .article_image_heading {
+
+          position: absolute;
+          bottom: 40px;
+          left: 30px;
+          background-color: #FFFFFF;
+          width: 124px;
+          height: 41px;
+          justify-content: center;
+
+          .heading6 {
+            color: #4D5053;
+            font-family: Jost;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 24px */
+            letter-spacing: 0.16px;
+            text-transform: capitalize;
+          }
+        }
+
+        .heading3 {
+          padding-top: 21px;
+          color: #292F36;
+          font-family: DM Serif Display, sans-serif;
+          font-size: 25px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 125%; /* 31.25px */
+          letter-spacing: 0.5px;
+          padding-bottom: 30px;
+        }
+
+        .heading5 {
+          color: #4D5053;
+          font-family: Jost, sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%; /* 24px */
+          letter-spacing: 0.16px;
+          text-transform: capitalize;
+        }
+
+        .date_arrow {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .article_arrow {
+            width: 53px;
+            height: 53px;
+            border-radius: 50%;
+            background-color: transparent;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+

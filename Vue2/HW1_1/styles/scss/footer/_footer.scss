@@ -1,0 +1,9 @@
+.footer {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__box {
+    max-width: 390px;
+  }
+}

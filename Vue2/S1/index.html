@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Установить расширение 
+Vue VSCode Snippets
+Vue Language Features (Volar)
+Создать новый файл index.html, добавить структуру
+Подключить vue к проекту
+Вывести на экран Hello Vue -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{ message }}
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue'
+            }
+        })
+    </script>
+    
+</body>
+</html>

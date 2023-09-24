@@ -1,0 +1,34 @@
+.footer {
+  .box {
+    img {
+      margin-bottom: 18px;
+    }
+    &__text {
+      color: $text1;
+      font-size: 22px;
+      line-height: 150%;
+      margin-bottom: 30px;
+    }
+    &__social {
+      &:not(:last-of-type) {
+        margin-right: 54px;
+      }
+    }
+    &__title {
+      color: $primary2;
+      font-size: 25px;
+      line-height: 125%;
+      margin-bottom: 25px;
+    }
+    &__link {
+      display: block;
+      text-decoration: none;
+      margin-bottom: 25px;
+      color: $text1;
+      font-size: 22px;
+    }
+    &:last-of-type {
+      max-width: 260px;
+    }
+  }
+}

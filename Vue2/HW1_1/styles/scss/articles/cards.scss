@@ -1,0 +1,63 @@
+.articles {
+  .cards {
+    display: flex;
+    justify-content: space-between;
+  }
+  .card {
+    max-width: 382px;
+    padding: 21px;
+    border-radius: 62px;
+    border: 1px solid #E7E7E7;
+    box-shadow: 0 10px 30px 0 rgba(255, 255, 255, 0.25);
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    &__title {
+      color: $primary2;
+      font-size: 25px;
+      line-height: 125%;
+    }
+    &__text {
+      color: $text1;
+      font-size: 16px;
+    }
+    &__actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__btn {
+      &-nav {
+        background-color: $primary3;
+        border-radius: 50%;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+      }
+      &-img {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        display: block;
+        padding: 4px 5px 8px 11px;
+        border-radius: 8px 8px 8px 0;
+        border-color: transparent;
+        outline: none;
+        background: #FFF;
+        color: $text1;
+        font-size: 16px;
+        line-height: 150%;
+        cursor: pointer;
+        transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+      }
+    }
+    &__image {
+      position: relative;
+    }
+    &:hover {
+      background-color: $primary3;
+      .card__btn-nav {
+        background-color: #fff;
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.projects {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 55px 100px;
+  }
+
+  .card {
+    max-width: 550px;
+    &__image {
+      margin-bottom: 24px;
+    }
+    &__description {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__title {
+      font-size: 25px;
+      color: $primary2;
+    }
+    button {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+    &__text {
+      font-size: 22px;
+      color: $text1;
+    }
+  }
+}
+
