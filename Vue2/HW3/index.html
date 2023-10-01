@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Homework 3</title>
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div id="app">
+      <blog-list :articles="articles"/>
+    </div>
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {
+            articles: [
+              {
+                article: `Aliquid fugit illo magni minima nemo nobis numquam porro provident reiciendis. Alias autem consequatur dolor illo ipsum iste libero qui?`,
+                tags: ["first", "second"],
+                id: 0
+              },
+              {
+                article: "A aliquid aperiam consectetur, consequatur debitis, dicta dignissimos eius, esse expedita id minus odio perspiciatis qui quia similique temporibus ut!",
+                tags: ["second", "third"],
+                id: 1
+              },
+              {
+                article: "Accusamus aut blanditiis cum cumque laudantium maiores? Ad, alias consequuntur est fuga minima non quaerat, repudiandae sed sunt tempora totam!",
+                tags: ["fourth", "fifth"],
+                id: 2
+              },
+              {
+                article: "Ad alias corporis ex excepturi ipsum labore nisi non pariatur perspiciatis praesentium quae quaerat quod recusandae reprehenderit velit voluptatem, voluptatum!",
+                tags: ["sixth", "first"],
+                id: 3
+              },
+              {
+                article: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab at cum doloremque eum facere id iste labore repudiandae sunt! Maxime!",
+                tags: ["third", "sixth"],
+                id: 4
+              },
+            ],
+          };
+        },
+      });
+      app.component("blog-details", {
+        props: {
+          article: String,
+          tags: Array,
+        },
+        template: `
+          <div class="article">
+          <p class="article__text">{{ article }}</p>
+          <div class="article__tags tags">
+            <p class="tags__title">TAGS: </p>
+            <span class="tags__tag"
+                  v-for="tag in tags">| {{ tag }} |</span>
+          </div>
+          </div>`
+      });
+      app.component("blog-summary", {
+        props: {
+          article: String
+        },
+        template: `
+          <div class="summary">
+          <p class="summary__text">{{ article.slice(0, 50) }}</p>
+          </div>`
+      });
+      app.component("blog-list", {
+        props: {
+          articles: Array,
+        },
+        data() {
+          return {
+            view: null,
+            providedTags: [],
+          }
+        },
+        methods: {
+          setView(value) {
+            if (Number.isFinite(value)) {
+              this.view = value;
+            } else {
+              this.view = null;
+            }
+            console.log(this.view);
+          },
+          toggleTag(tag) {
+            if (this.providedTags.includes(tag)) {
+              this.providedTags = this.providedTags.filter(el => el !== tag);
+            } else {
+              this.providedTags.push(tag);
+            }
+          },
+        },
+        computed: {
+          selectedArticle() {
+            return this.articles.filter(article => article.id === this.view)[0];
+          },
+          selectedArticles() {
+            if (this.providedTags.length === 0) return this.articles;
+            return this.articles.filter(article => article.tags.some(tag => this.providedTags.includes(tag)));
+          },
+          articlesTags() {
+            return [...this.articles.reduce((tags, article) => tags.add(...article.tags), new Set())];
+          },
+        },
+        template: `
+          <section class="blog">
+          <h1 class="blog__title">Blog</h1>
+          <div class="blog__list"
+               v-for="element in selectedArticles">
+            <blog-summary :article="element.article" />
+            <button @click="setView(element.id)">Show more</button>
+          </div>
+          <div class="blog__togglers togglers">
+            <button v-for="tag in articlesTags" :key="tag" @click="toggleTag(tag)">{{ tag }}</button>
+          </div>
+          <div class="blog__current" v-if="selectedArticle">
+            <h2>current</h2>
+            <button @click="setView">Hide</button>
+            <blog-details :article="selectedArticle.article"
+                          :tags="selectedArticle.tags"/>
+          </div>
+          </section>`
+      });
+      app.mount("#app");
+    </script>
+  </body>
+</html>
