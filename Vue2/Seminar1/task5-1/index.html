@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Создайте кнопку "Генерировать случайное число". При клике на кнопку должно отображаться случайное число в заданном диапазоне (например, от 1 до 10).
+При клике на кнопку, если полученное значение меньше 5, необходимо вывести на страницу, “Число меньше 5”
+Если число от 5 до 9, необходимо вывести “Число от 5 до 9”
+Если число равно 10, необходимо вывести “Число равно 10”
+ -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random numbers</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <button @click="generateRandomNumber">Генерировать случайное число</button>
+      <p>{{ randomNumber }}</p>
+      
+    </div>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                randomNumber: 0,
+            },
+            methods: {
+                generateRandomNumber() {
+                    this.randomNumber = Math.floor(Math.random() * 10) + 1;
+                }
+            },
+            computed: {
+                numberString() {
+                    // здесь всегда должно возвращаться некое значение, чтобы потом к нему обращаться как к свойству
+                    const {randomNumber} = this; // означает, забери randomNumber и создай константу с тем же именем
+
+                    if (randomNumber < 5) {
+                        return "Число меньше 5";
+                    } else if (randomNumber >= 5 && randomNumber <= 9) {
+                        return "Число от 5 до 9";
+                    }
+                    return "Число равно 10";
+                }
+            }
+        })
+    </script>
+  </body>
+</html>
