@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Jost', sans-serif;
+    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+}
+
+h1, h2 {
+    text-align: center;
+    line-height: 60px;
+}
+
+h2 {
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+    font-size: xx-large;
+}
+
+a {
+    color: #DDCFFF;
+    text-decoration: none;
+    transition: color 500ms ease;
+}
+
+a:hover {
+    color: #A0A2FF;
+}
+
+p, ul {
+    padding: 10px 0;
+}
+
+a.button {
+    text-align: center;
+    width: 30%;
+    height: 40px;
+    margin: 10px auto;
+    justify-content: center;
+    display: flex;
+    color: #fff;
+    background: #573b8a;
+    font-size: 1em;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: .2s ease-in;
+    cursor: pointer;
+    padding-top: 15px;
+}
+
+a.button:hover {
+    background: #6d44b8;
+}
+
+button {
+    width: 60%;
+    height: 40px;
+    margin: 10px auto;
+    justify-content: center;
+    display: block;
+    color: #fff;
+    background: #573b8a;
+    font-size: 1em;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: .2s ease-in;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #6d44b8;
+}
+
+label {
+    color: #fff;
+    font-size: 1.4em;
+    justify-content: center;
+    display: flex;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+input {
+    width: 60%;
+    height: 20px;
+    background: #e0dede;
+    justify-content: center;
+    display: flex;
+    margin: 10px auto;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.text-container {
+    width: 660px;
+    margin: 0 auto;
+    padding: 10px 0;
+    color: #FFFFFF;
+    min-height: 200px;
+}
+
+.form-container {
+    width: 1000px;
+    margin: 0 auto;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+
+}
+
+.main {
+    width: 350px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px #000;
+    padding-top: 30px;
+}
+
+.errors {
+    color: #ff7676;
+    padding: 20px;
+    border: #FFFD00 1px solid;
+    margin: 20px;
+    text-align: center;
+}
+
+.success {
+    color: #65ff41;
+    padding: 20px;
+    border: #FFFD00 1px solid;
+    margin: 20px;
+    text-align: center;
+}
