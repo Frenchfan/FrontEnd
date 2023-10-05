@@ -12,12 +12,11 @@
 </head>
 <body>
     <div id="app">
-        <input type="text" v-model="newItem">
-        <button @click="addItem()">Add</button>
+        <button @click="addItem()">Добавить</button>
         <ul>
-            <li v-for="(item, index) in items" :key="index">
+            <li v-for="(item, index) in items" :key="index" @click="removeItem(index)">
                 {{item}}
-                <button @click="removeItem(index)">Delete</button>
+<!--                <button @click="removeItem(index)">Удалить</button>-->
             </li>
         </ul>
     </div>
@@ -25,13 +24,12 @@
         new Vue({
             el: '#app',
             data: {
-                newItem: '',
-                items: ['Item 1', 'Item 2', 'Item 3']
+                newItem: 'Новый элемент списка',
+                items: ['Эоемент 1', 'Элемент 2', 'Элемент 3']
             },
             methods: {
                 addItem() {
                     this.items.push(this.newItem);
-                    this.newItem = '';
                 },
                 removeItem(index) {
                     this.items.splice(index, 1);
