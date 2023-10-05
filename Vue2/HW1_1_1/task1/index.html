@@ -9,17 +9,17 @@
 </head>
 <body>
     <div id="app">
-        <button @click="reverseMessage">{{reverseMessage}}</button>
+        <button @click="reverseMessage()">{{message}}</button>
     </div>
     <script>
         new Vue({
             el: '#app',
             data: {
                 message: 'Hello Vue'
-            }, 
-            computed: {
+            },
+            methods: {
                 reverseMessage() {
-                    return this.message.split('').reverse().join('')
+                    this.message = this.message.split('').reverse().join('');
                 }
             }
         })
