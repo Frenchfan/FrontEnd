@@ -31,16 +31,13 @@ const schedules = [
     },
 ];
 
-<<<<<<< HEAD
 /**
  * Renders the schedules on the webpage.
  *
  * @param {none}
  * @return {none}
  */
-=======
-// Function to render the schedules on the page
->>>>>>> 09cfac0c72491dbed717c9c9c1425ba3ad3176d6
+
 function renderSchedules() {
     const scheduleContainer = document.getElementById("schedule");
     scheduleContainer.innerHTML = "";
@@ -99,8 +96,4 @@ function renderSchedules() {
     });
 }
 
-<<<<<<< HEAD
-=======
-// Call the renderSchedules function to initially render the schedules
->>>>>>> 09cfac0c72491dbed717c9c9c1425ba3ad3176d6
 renderSchedules();
