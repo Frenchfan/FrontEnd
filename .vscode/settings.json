@@ -1,6 +1,7 @@
 {
-    "java.compile.nullAnalysis.mode": "automatic",
-    "java.configuration.updateBuildConfiguration": "automatic",
-    "figma.autocompleteBlocks": false,
-    "figma.autocompleteProperties": false
+  "java.compile.nullAnalysis.mode": "automatic",
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "figma.autocompleteBlocks": false,
+  "figma.autocompleteProperties": false,
+  "java.debug.settings.onBuildFailureProceed": true
 }
