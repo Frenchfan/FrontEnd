@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body>
+    <script>
+        fetch('http://95.140.156.17:8085/api/v1/auth/login', {
+            method: 'POST',
+            headers: {
+                Authorization: 'Bearer ' + btoa('12345')
+            }
+        } 
+        )
+    </script>
+</body>
+</html>
